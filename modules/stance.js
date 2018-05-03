@@ -68,8 +68,8 @@ function autoStance() {
     //start analyzing autostance
     var missingHealth = game.global.soldierHealthMax - game.global.soldierHealth;
     var newSquadRdy = game.resources.trimps.realMax() <= game.resources.trimps.owned + 1;
-    var dHealth = baseHealth/2;
-    var xHealth = baseHealth;
+    var dHealth = baseHealth*100
+    var xHealth = baseHealth/2;
     var bHealth = baseHealth/2;
     var enemy;
     var corrupt = game.global.world >= mutations.Corruption.start();

@@ -13,7 +13,7 @@
 var AutoPerks = {};
 MODULES["perks"] = {};
 MODULES["perks"].showDetails = true;   //show which individual perks are spent;
-MODULES["perks"].useAlgo2 = false;   //use algorithm 2 instead.
+MODULES["perks"].useAlgo2 = true;   //use algorithm 2 instead.
 
 //Import the FastPriorityQueue.js general Library (not AT specific, but needed for perk queue)
 var head = document.getElementsByTagName('head')[0];

@@ -157,12 +157,12 @@ AutoPerks.displayGUI = function() {
     apGUI.$ratiosLine2.appendChild(apGUI.$dumpperklabel);
     apGUI.$ratiosLine2.appendChild(apGUI.$dumpperk);
     //Toggle Algorithm 2 checkbox
-    apGUI.$toggleAlgo2 = document.createElement("DIV");
-    apGUI.$toggleAlgo2.setAttribute('style', 'display: inline; text-align: left; margin-left: 1vw;');
-    apGUI.$toggleAlgo2.innerHTML = '\
-    <input onclick="AutoPerks.toggleFastAllocate()" style="margin-left: 0.5vw;" type="checkbox" id="fastAllocate">\
-    <span style="margin-left: 0.2vw; font-size: 1.1vw; "><b>Fast Allocate!</b></span>';
-    $buttonbar.appendChild(apGUI.$toggleAlgo2);
+    //apGUI.$toggleAlgo2 = document.createElement("DIV");
+    //apGUI.$toggleAlgo2.setAttribute('style', 'display: inline; text-align: left; margin-left: 1vw;');
+    //apGUI.$toggleAlgo2.innerHTML = '\
+    // <input onclick="AutoPerks.toggleFastAllocate()" style="margin-left: 0.5vw;" type="checkbox" id="fastAllocate">\
+    //<span style="margin-left: 0.2vw; font-size: 1.1vw; "><b>Fast Allocate!</b></span>';
+    //$buttonbar.appendChild(apGUI.$toggleAlgo2);
     var $fastAllocate = document.getElementById("fastAllocate");
     $fastAllocate.setAttribute("onmouseover", 'tooltip(\"FastAllocate\", \"customText\", event, \"Bulk buys thousands of Tier2 Perks at once to save time. Caution - May overshoot. Recommended for High Helium amounts above 1 Qi only.\")');
     $fastAllocate.setAttribute("onmouseout", 'tooltip("hide")');
@@ -706,9 +706,9 @@ AutoPerks.getPercent = function(spentHelium, totalHelium) {
     frac = (frac* 100).toPrecision(2);
     return frac + "%";
 }
-// AutoPerks.toggleFastAllocate = function() {
-//    MODULES["perks"].useAlgo2 = !MODULES["perks"].useAlgo2;
-//}
+ AutoPerks.toggleFastAllocate = function() {
+    MODULES["perks"].useAlgo2 = !MODULES["perks"].useAlgo2;
+}
 
 AutoPerks.FixedPerk = function(name, base, level, max, fluffy) {
     this.id = -1;

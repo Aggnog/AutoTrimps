@@ -706,7 +706,7 @@ AutoPerks.getPercent = function(spentHelium, totalHelium) {
     frac = (frac* 100).toPrecision(2);
     return frac + "%";
 }
- AutoPerks.toggleFastAllocate = function() {
+AutoPerks.toggleFastAllocate = function() {
     MODULES["perks"].useAlgo2 = !MODULES["perks"].useAlgo2;
 }
 
